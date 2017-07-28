@@ -1,3 +1,8 @@
+function bodyLoaded(){
+	console.log("I am working");
+	preloadImage('./imgs/monks.jpg', main);
+};
+
 var main = function(){
 	var gridW = 500;
 	var gridH = 500; 
@@ -18,6 +23,8 @@ var main = function(){
 
 	byClass('container').style.width = gridW+"px";
 	byClass('container').style.height = gridH+"px";
+
+
 
 	var empty = false;
 	var temp = null;
@@ -203,7 +210,6 @@ var main = function(){
 
 }
 
-
 //Helpers
 var byId = function(id){
 	return document.getElementById(id);
@@ -217,3 +223,19 @@ var make = function(type){
 var append = function(node, child){
 	return document.getElementsByClassName(node)[0].appendChild(child);
 }
+var preloadImage = function(url, callback)
+{
+    var img=new Image();
+    img.src=url;
+
+	if (img.complete) {
+	  callback()
+	} else {
+	  img.addEventListener('load', callback)
+	  img.addEventListener('error', function() {
+	      alert('error')
+	  })
+	}
+}
+
+document.addEventListener("DOMContentLoaded", bodyLoaded);
