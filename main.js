@@ -4,7 +4,7 @@ function bodyLoaded(){
 };
 
 var main = function(){
-	console.log("Preloading ended at"+new Date().getTime());
+	console.log("Preloading ended at", new Date().getTime());
 	var gridW = 500;
 	var gridH = 500; 
 
@@ -227,7 +227,7 @@ var append = function(node, child){
 var preloadImage = function(url, callback)
 {
 
-   	console.log("Preloading started at"+new Date().getTime());
+   	console.log("Preloading started at", new Date().getTime());
     var img=new Image();
     img.src=url;
 
