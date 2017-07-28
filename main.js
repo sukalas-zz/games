@@ -4,7 +4,7 @@ function bodyLoaded(){
 };
 
 var main = function(){
-	console.log("Preloading ended at"new Date().getTime());
+	console.log("Preloading ended at"+new Date().getTime());
 	var gridW = 500;
 	var gridH = 500; 
 
