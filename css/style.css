@@ -1,0 +1,32 @@
+body, html{
+	margin:0;
+	padding:0;
+}
+
+.container{
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.cell{
+	position:relative;
+	float:left;
+	box-sizing: border-box;
+	border:1px solid black;
+	padding:5px;
+	background-size: 500px 500px;
+	color:white;
+	transition:.25s background-color;
+	z-index: 99999;
+}
+.box:hover{
+	background-color:rgba(0,0,0,0.1);
+	cursor:pointer;
+}
+button{
+	position: absolute;
+	left: 190px;
+	bottom: -50px;
+	margin: auto;
+}
