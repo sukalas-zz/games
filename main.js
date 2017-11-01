@@ -1,5 +1,4 @@
 function bodyLoaded(){
-	console.log("I am working");
 	preloadImage('./imgs/monks.jpg', main);
 };
 
@@ -16,6 +15,7 @@ var main = function(){
 
 	bgX = 0;
 	bgY = 0;
+	
 	randRow = Math.floor(Math.random()*(3));
 	randCol = Math.floor(Math.random()*(3));
 
@@ -24,8 +24,6 @@ var main = function(){
 
 	byClass('container').style.width = gridW+"px";
 	byClass('container').style.height = gridH+"px";
-
-
 
 	var empty = false;
 	var temp = null;
@@ -208,9 +206,7 @@ var main = function(){
 				remaining = (numCh - cntr);
 				console.log("There are : "+remaining+" boxes remaining")
 			}
-
 }
-
 //Helpers
 var byId = function(id){
 	return document.getElementById(id);
