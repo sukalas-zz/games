@@ -1,0 +1,222 @@
+/*MAIN SETTINGS*/
+body{
+	display: none;
+	margin:0;
+	width: 100%;
+	height: 100%;
+	font-family: "Arial", "Helvetica", Roboto;
+	background-color: rgba(0, 0, 0, .9);
+	background-image: radial-gradient(circle at center ,rgba(255, 255, 255, 0.15) 20%, rgba(0, 0, 0, 0.35) 60%);
+	background-repeat: no-repeat;
+	grid-template-rows: minmax(25px, 10%) 758px minmax(20px, 10%);
+	z-index:-99999;
+}
+
+#game {
+	margin:auto;
+	width:750px;
+	overflow:hidden;
+}
+
+#app{
+	margin: auto;
+	width:750px;
+	height: 600px;
+	display: grid;
+	grid-gap: 0px;
+	grid-template-rows: repeat(5, 150px);
+	grid-template-columns: repeat(5, 150px);
+	grid-auto-flow: row;
+	background-color: rgba(48, 48, 48, 1);
+	z-index:99999;
+}
+
+/*GAME GRID*/
+.box {
+	color: #fff;
+	font-size: 150%;
+	border: none !important;
+	outline: none !important;
+	cursor: pointer;
+	transition: .25s all;
+}
+
+.inactive {
+	background-image: none !important;
+}
+.box:nth-child(even) {
+	background-color: rgba(0,0,0,0.5);
+	outline: none !important;
+	border:none !important;
+	transition: .25s background-color;
+}
+.box:nth-child(even):hover{
+	background-color: rgba(0,0,0,0.55);
+}
+
+.box:nth-child(odd){
+	outline: none !important;
+	border:none !important;
+	background-color: rgba(255,255,255,0.5);
+	transition: .25s background-color;
+}
+
+.box:nth-child(odd):hover{
+	background-color: rgba(255,255,255,0.55);
+}
+
+.card{
+	width:150px;
+	height:150px;
+	outline: none !important;
+	border:none !important;
+	background-size: cover !important; 
+	background-position: center center !important; 
+	background-repeat: no-repeat !important;
+}
+
+/*PANEL & SETTINGS*/
+.panel {
+	display: grid;
+	height: 40px;
+	grid-template-columns: minmax(200px, 1fr) auto minmax(200px, 1fr);
+	padding: 9px;
+	background-color: rgba(0, 0, 0, 0.7);
+	font-size: 1.12rem;
+	line-height: 1.2rem;
+	color: white;
+}
+
+#holder{
+	font-weight: 100 !important;
+}
+
+.score-holder {
+	text-align: right;
+	padding: 10px;
+}
+.score,.player{
+	font-weight: 600 !important;
+	padding: 10px;
+}
+#seperator {
+	margin-right: 10px;
+	padding: 10px;
+	text-align: left;
+}
+.player-holder{
+	text-align: left;
+	padding: 10px;
+}
+.player {
+	text-align: center;
+}
+.turn {
+}
+/* BUTTONS */
+button#start {
+	width:750px;
+	height:100px;
+	margin:auto;
+	color: white;
+	font-size: 2rem;
+	border:none;
+	background-color: rgba(0,0,0,.5);
+	outline: none;
+	cursor: pointer;
+	transition: .35s background-color;
+}
+button#start:active{
+	background-color: rgba(255,0,0,.5);
+} 
+
+/* CUSTOM ALERT BOX- INPUTS */
+.overlay {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(100, 100, 100, .8);
+}
+
+.input-panel {
+	display: none;
+	position: fixed;
+	min-width: 600px;
+	min-height: 400px;
+	grid-row-gap: 20px;
+	grid-template-rows: 15% 20% 20% auto;
+	grid-template-columns: 100%;
+	grid-auto-flow: row;
+	width: 50%;
+	height: 35%;
+	border-radius: 5px;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, .8);
+	z-index:99999;
+}
+.title-panel {
+	display: grid;
+	grid-column-gap: 10%;
+	grid-template-columns: 85% 5%;
+	font-size: 1.9rem;
+	letter-spacing: 1px;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+input {
+	width: 100%;
+	padding: 15px;
+	font-size: 1.7rem;
+	letter-spacing: 1px;
+	color: white;
+	border: none;
+	border-radius: 3px;
+	background-color: rgba(0, 0, 0, .8);
+	transition: .25s background-color;
+}
+input:focus {
+	outline: none;
+	background-color: rgba(0, 0, 0, .6);
+}
+.usernames-row {
+	display: grid;
+	grid-column-gap: 4%;
+	grid-template-columns: 48% 48%;
+}
+.settings-row {
+	display: grid;
+}
+input.usernames {
+	width: auto;
+}
+.submit {
+	display: grid;
+}
+button.ok {
+	padding: 0px !important;
+	font-size: 2rem;
+	color: white;	
+	background-color: rgba(0, 0, 0, .7);
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+button.ok:hover{
+	background-color: rgba(0, 0, 0, .5);
+}
+button.ok:focus{
+	font-size: 2rem;
+	outline: none;
+	background-color: rgba(0, 0, 0, .5);
+}
+
+/* ICONS */
+.fa-times {
+	text-align: right;
+	cursor: pointer;
+	transition: 0.25s all;
+}
+.fa-times:hover{
+	color:white;
+}

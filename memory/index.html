@@ -1,0 +1,73 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+	<title>Memory Game  - Improvised Version</title>
+</head>
+	<body onload="Interface.init();">
+
+		<div></div>
+		<div id="game">
+			<div class="panel">
+					<span class="player-holder" id="holder">Player: <!-- <input class="username" title="enter username for player 1" placeholder="enter username..."> -->
+						<span class="player"></span>
+					</span>
+					<span id="seperator">|</span>
+					<span class="score-holder" id="holder">Your score is: 
+						<span class="score"></span>
+					</span>
+			</div>
+			<div id="app">
+				  <div class="box"><div class="card"></div></div>
+				  <div class="box"><div class="card"></div></div>
+				  <div class="box"><div class="card"></div></div>
+				  <div class="box"><div class="card"></div></div>
+				  <div class="box"><div class="card"></div></div>
+				  <div class="box"><div class="card"></div></div>
+				  <div class="box"><div class="card"></div></div>
+				  <div class="box"><div class="card"></div></div>
+				  <div class="box"><div class="card"></div></div>
+				  <div class="box"><div class="card"></div></div>
+				  <div class="box"><div class="card"></div></div>
+				  <div class="box"><div class="card"></div></div>
+				  <div class="box"><div class="card"></div></div>
+				  <div class="box"><div class="card"></div></div>
+				  <div class="box"><div class="card"></div></div>
+				  <div class="box"><div class="card"></div></div>
+				  <div class="box"><div class="card"></div></div>
+				  <div class="box"><div class="card"></div></div>
+				  <div class="box"><div class="card"></div></div>
+				  <div class="box"><div class="card"></div></div>
+			</div>
+			<button id="start">start
+			</button>
+		</div>
+		<div></div>
+		<div class="overlay">
+			<div class="input-panel">
+				<div class ="title-panel"><span>Welcome strangers, please fill your preferences bellow:</span><i class="fa fa-times fa-1x" aria-hidden="true" title="exit the settings panel and play with default settings"></i></div>
+				<div class="usernames-row">
+					<input class="usernames" id="user1-input" type="text" placeholder="Player A" title="set username for player A">
+					<input class="usernames" id="user2-input"type="text" placeholder="Player B" title="set username for player B">
+				</div>
+				<div class ="settings-row">
+					<input class="settings" type="text" placeholder="Amount of tiles" title="set the complexity of the game (not supported)">
+				</div>
+				<div class="submit">
+					<button class="ok">ready</button>
+
+				</div>
+
+			</div>
+		</div>
+		<script src="interface.js"></script>
+		<script src="main.js"></script>
+		<script src="game.js"></script>
+		<script src="api.js"></script>
+	</body>
+</html>
