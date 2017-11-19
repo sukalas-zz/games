@@ -1,0 +1,30 @@
+body {
+	display: grid;
+	grid-template-rows: 200px 300px;
+	background-color: rgba(0,0,0,1);
+	background-image: url("assets/bg.png");
+	background-size: 100px 100px;
+	color: white;
+}
+#title {
+	margin: auto;
+}
+#gallery {
+	margin: auto;
+}
+.main-list {
+}
+a {
+	color: white;
+	font-size: 18px;
+}
+a:hover {
+	color: white;
+}
+li {
+	list-style: none;
+	line-height: 40px;
+	text-align: center;
+}
+.main-list > li:hover {
+	text-decoration: underline;
